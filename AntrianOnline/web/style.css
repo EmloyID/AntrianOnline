@@ -1,0 +1,58 @@
+body {
+    background-color:#000;
+}
+#template{
+    height:auto;
+    width : 1353px;
+}
+#header{
+    height: 150px;
+    width: 1000px;
+    border: 1px solid #000;
+    background-image: url(header.jpeg);
+}
+#kanan{
+    height:553px;
+    width: 348px;
+    border: 1px solid #000;
+    background-color: #636363;
+    margin: 0px 1004px;
+}
+*   form{
+		float : right;
+		margin: 4px 10px;
+   }
+*   input[type=submit]{
+		width	: 90px;
+		height	: 30px;
+		color	: snow;
+		background: #4567b1;
+		border	: 1px solid #29497e;
+   }
+*   input[type=submit]:hover{
+		background-color:#2663br;
+   }
+*   input[type=reset]{
+		width	: 90px;
+		height	: 30px;
+		color	: snow;
+		background: #4567b1;
+		border	: 1px solid #29497e;
+   }
+*   input[type=reset]:hover{
+		background-color:#2663br;
+   }
+   
+#menu{
+    height: 400px;
+    width: 1000px;
+    border: 1px solid #000;
+    background-image: url(isi2.jpg);
+    margin: 2px 0px;
+}
+#footer{
+    height: 77px;
+    width: 1354px;
+    border: 1px solid #000;
+    background-image: url(footer.png);
+}

@@ -10,7 +10,7 @@
     if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
 %>
 Anda Belum login <br/>
-<a href="index.jsp">Silahkan Login</a>
+<a href="menuLogin.jsp">Silahkan Login</a>
 <%} else {
 %>
 <center><h2>Welcome <%=session.getAttribute("userid")%>

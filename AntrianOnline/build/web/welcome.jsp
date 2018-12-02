@@ -15,7 +15,7 @@
         <center>
         <h2>
         Registrasi berhasil <br>
-        silahkan <a href='index.jsp'>login</a>
+        silahkan <a href='menuLogin.jsp'>login</a>
         </h2>
         </center>
     </body>

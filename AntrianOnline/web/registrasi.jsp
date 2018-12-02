@@ -49,7 +49,7 @@
                         
                     </tr>
                     <tr>
-                        <td colspan="2">Sudah punya akun? <a href="index.jsp">Login Disini</a></td>
+                        <td colspan="2">Sudah punya akun? <a href="menuLogin.jsp">Login Disini</a></td>
                     </tr>
                 </tbody>
             </table>

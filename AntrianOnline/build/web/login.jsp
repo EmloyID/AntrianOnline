@@ -23,6 +23,6 @@
         out.println("<a href='logout.jsp'>Log out</a>");
         response.sendRedirect("sukses.jsp");
     } else {
-        out.println("<center><h2>Username atau Password salah <a href='index.jsp'>coba lagi</a>");
+        out.println("<center><h2>Username atau Password salah <a href='menuLogin.jsp'>coba lagi</a>");
     }
 %>
