@@ -1,28 +1,47 @@
 <%-- 
-    Document   : login
-    Created on : Nov 30, 2018, 11:24:40 PM
+    Document   : index
+    Created on : Nov 30, 2018, 11:19:32 PM
     Author     : riski
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%@ page import ="java.sql.*" %>
- 
-<%
-    String userid = request.getParameter("username");    
-    String pwd = request.getParameter("password");
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/antrianonline",
-            "root", "");
-    Statement st = con.createStatement();
-    ResultSet rs;
-    rs = st.executeQuery("select * from user where username='" + userid + "' and password='" + pwd + "'");
-    if (rs.next()) {
-        session.setAttribute("userid", userid);
-        out.println("<center><h2>welcome " + userid);
-        out.println("<a href='logout.jsp'>Log out</a>");
-        response.sendRedirect("sukses.jsp");
-    } else {
-        out.println("<center><h2>Username atau Password salah <a href='menuLogin.jsp'>coba lagi</a>");
-    }
-%>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <form method="post" action="login.jsp"> 
+            <center>
+            <table border="0" width="30%" cellpadding="10" bgcolor="grey">
+                <thead>
+                    <tr>
+                        <th colspan="2">Fitur Login<hr width="100%" color="black"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" name="username" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr width="100%" color="black"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="Login" /><input type="reset" value="Reset" /></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">Belum mempunyai akun? <a href="registrasi.jsp">Daftar Disini</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </center>
+        </form>
+    </body>
+</html>
