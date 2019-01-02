@@ -18,12 +18,19 @@
             "root", "");
     Statement st = con.createStatement();
     //ResultSet rs;
-    int i = st.executeUpdate("insert into akun ( nik, nama_lgkp, username, password, kecamatan) values ('" + nik + "','" + nama_lgkp + "','" + user + "','" + pwd + "','" + kecamatan + "')");
+    ResultSet cek_nik;
+    cek_nik=st.executeQuery ("SELECT nik FROM user WHERE nik='"+nik+"'");
+    if (cek_nik.next()) {
+        out.println("<center><h2>Maaf NIK sudah digunakan <a href='registrasi.jsp'>coba lagi</a>");
+    } else {
+    
+    
+    int i = st.executeUpdate("insert into user ( nik, nama_lgkp, username, password, kecamatan) values ('" + nik + "','" + nama_lgkp + "','" + user + "','" + pwd + "','" + kecamatan + "')");
     if (i > 0) {
         //session.setAttribute("userid", user);
         response.sendRedirect("welcome.jsp");
        // out.print("Registration Successfull!"+"<a href='index.jsp'>Go to Login</a>");
     } else {
         response.sendRedirect("menuLogin.jsp");
-    }
+    } }
 %>

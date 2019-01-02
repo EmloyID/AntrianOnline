@@ -16,7 +16,7 @@
             "root", "");
     Statement st = con.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from akun where username='" + userid + "' and password='" + pwd + "'");
+    rs = st.executeQuery("select * from user where username='" + userid + "' and password='" + pwd + "'");
     if (rs.next()) {
         session.setAttribute("userid", userid);
         out.println("<center><h2>welcome " + userid);
