@@ -9,5 +9,5 @@
 <%
 session.setAttribute("username", null);
 session.invalidate();
-response.sendRedirect("menuLogin.jsp");
+response.sendRedirect("index.html");
 %>

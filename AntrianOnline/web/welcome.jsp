@@ -12,10 +12,12 @@
         <title>Registrasi Sukses</title>
     </head>
     <body>
+        <br>
+        <br>
         <center>
         <h2>
-        Registrasi berhasil <br>
-        silahkan <a href='menuLogin.jsp'>login</a>
+        <h1>Registrasi berhasil</h1>
+        <h2>Silahkan <a href='menulogin.jsp' style="text-decoration: none;color:blue">Login</a>
         </h2>
         </center>
     </body>

@@ -31,6 +31,6 @@
         response.sendRedirect("welcome.jsp");
        // out.print("Registration Successfull!"+"<a href='index.jsp'>Go to Login</a>");
     } else {
-        response.sendRedirect("menuLogin.jsp");
+        response.sendRedirect("menulogin.jsp");
     } }
 %>

@@ -9,12 +9,24 @@
 <%
     if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
 %>
-Anda Belum login <br/>
-<a href="menuLogin.jsp">Silahkan Login</a>
+<body background="BackgroundMAIN.png">
+<br>
+<br>
+<br>
+<br>
+<center>
+<font color="white">
+<table border="0">
+<tr><td align="center"><h1>Anda Belum login
+<tr><td align="center"><h2><a href="Login.html" style="text-decoration: none;color:blue"><u>Silahkan Login</u></a>
 <%} else {
 %>
-<center><h2>Welcome <%=session.getAttribute("userid")%>
-<a href='logout.jsp'>Log out</a>
+<center>
+<br>
+<br>
+<h1>Welcome <%=session.getAttribute("userid")%></h1>
+<a href='home.html' style="text-decoration: none;color:blue" target="_top"><h2>Home</a>
 <%
     }
 %>
+</table>
