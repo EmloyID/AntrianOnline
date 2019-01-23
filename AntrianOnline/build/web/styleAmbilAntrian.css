@@ -1,0 +1,45 @@
+body {
+    background-image: url(Background.png);
+}
+#template{
+    height: 100%;
+    width : 100%;
+    margin: 0px 8%;
+}
+#header{
+    height: 33%;
+    width: 90%;
+    background-image: url(Header.png);
+}
+.content{
+	overflow: hidden;	
+	width: 90%;
+	height: 100%;
+    
+}
+
+*   form{
+		float : right;
+		margin-top: 5%;
+   }
+*   input[type=submit]{
+		width	: 90px;
+		height	: 30px;
+		color	: snow;
+		background: #4567b1;
+		border	: 1px solid #29497e;
+   }
+*   input[type=submit]:hover{
+		background-color:#2663br;
+   }
+#homepage{
+    height: 100%;
+    width: 100%;
+    background-image: url(BackgroundMAIN.png);
+    margin: 0% 0%;
+}
+#footer{
+    height: 15%;
+    width: 90%;
+    background-color:white;
+}

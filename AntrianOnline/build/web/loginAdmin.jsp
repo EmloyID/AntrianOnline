@@ -16,13 +16,13 @@
             "root", "");
     Statement st = con.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from user where username='" + userid + "' and password='" + pwd + "'");
+    rs = st.executeQuery("select * from admin where username='" + userid + "' and password='" + pwd + "'");
     if (rs.next()) {
         session.setAttribute("userid", userid);
         out.println("<center><h2>welcome " + userid);
-        out.println("<a href='logout.jsp'>Log out</a>");
-        response.sendRedirect("sukses.jsp");
+        out.println("<a href='homeAdmin.html'>Home Admin</a>");
+        response.sendRedirect("suksesAdmin.jsp");
     } else {
-        out.println("<br><br><center><h2>Username atau Password salah <a href='menulogin.jsp'>coba lagi</a>");
+        out.println("<br><br><center><h2>Username atau Password salah <a href='menuLoginAdmin.jsp'>coba lagi</a>");
     }
 %>
