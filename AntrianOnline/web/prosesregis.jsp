@@ -4,6 +4,7 @@
     Author     : riski
 --%>
 
+<%@page import="Database.DB_Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ page import ="java.sql.*" %>
@@ -13,9 +14,8 @@
     String user = request.getParameter("username");    
     String pwd = request.getParameter("password");
     String kecamatan = request.getParameter("kecamatan");
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/antrianonline",
-            "root", "");
+    DB_Connection db = new DB_Connection();
+    Connection con = db.getConn();
     Statement st = con.createStatement();
     //ResultSet rs;
     ResultSet cek_nik;

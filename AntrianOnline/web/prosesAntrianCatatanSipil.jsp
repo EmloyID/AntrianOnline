@@ -4,14 +4,14 @@
     Author     : riski
 --%>
 
+<%@page import="Database.DB_Connection"%>
 <%@ page import ="java.sql.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
 String user = String.valueOf(session.getAttribute("userid"));
-Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/antrianonline",
-            "root", "");
+    DB_Connection db = new DB_Connection();
+    Connection con = db.getConn();
     Statement st = con.createStatement();
     ResultSet cek_username;
     cek_username=st.executeQuery ("SELECT username FROM antriancatatansipil WHERE username='"+user+"'");
